@@ -4,7 +4,7 @@ import { AntDesign } from '@expo/vector-icons';
 import WelcomeImg from '../../assets/welcome.png';
 import Logo from '../../assets/logo.png';
 
-export function Welcome() {
+export function Welcome({ navigation }) {
     return (
         <ImageBackground source={WelcomeImg} style={{ flex: 1 }}>
             <SafeAreaView style={{ flex: 1 }}>
@@ -43,7 +43,12 @@ export function Welcome() {
                         justifyContent: "center",
                         alignItems: "center",
                         gap: 10,
-                    }}>
+                    }}
+
+                        onPress={() => {
+                            navigation.navigate("Dashboard");
+                        }}
+                    >
                         <Text style={{
                             color: "white",
                         }}>Start Cooking</Text>
