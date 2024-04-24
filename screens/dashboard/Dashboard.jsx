@@ -8,13 +8,13 @@ import { RecipeCard } from "../../components/RecipeCard/RecipeCard";
 import { DifficultyLevels as DifficultyLevelsData } from '../../data';
 import { recipeList as recipeListData } from '../../data';
 
-export function Dashboard() {
+export function Dashboard({ navigation }) {
     return (
         <SafeAreaView style={{ flex: 1, padding: 10 }}>
             <TopBar />
             <SearchReceip />
             <DifficultyBtn data={DifficultyLevelsData} />
-            <RecipeCard data={recipeListData} />
+            <RecipeCard data={recipeListData} navigation={navigation} />
         </SafeAreaView>
     )
 } 
