@@ -51,6 +51,49 @@ export function RecipeDetails({ route, navigation }) {
                     </Text>
                 </View>
 
+                {/* min & medium & calories */}
+                <View style={{
+                    flexDirection: "row",
+                    justifyContent: "center",
+                    gap: 12,
+                    marginTop: 20
+                }}>
+                    <View style={{
+                        height: 90,
+                        width: 90,
+                        paddingVertical: 10,
+                        borderRadius: 10,
+                        alignItems: "center",
+                        backgroundColor: "#129575"
+                    }}>
+                        <Text style={{ fontSize: 30 }}>⏱️</Text>
+                        <Text style={{ color: "white" }}>{time}</Text>
+                    </View>
+                    <View style={{
+                        height: 90,
+                        width: 90,
+                        paddingVertical: 10,
+                        borderRadius: 10,
+                        alignItems: "center",
+                        backgroundColor: "#129575"
+                    }}>
+                        <Text style={{ fontSize: 30 }}>🍜</Text>
+                        <Text style={{ color: "white" }}>{difficulty}</Text>
+                    </View>
+                    <View style={{
+                        height: 90,
+                        width: 90,
+                        paddingVertical: 10,
+                        borderRadius: 10,
+                        alignItems: "center",
+                        backgroundColor: "#129575"
+                    }}>
+                        <Text style={{ fontSize: 30 }}>🔥</Text>
+                        <Text style={{ color: "white" }}>{calories}</Text>
+                    </View>
+                </View>
+
+
 
             </View>
 
