@@ -93,7 +93,32 @@ export function RecipeDetails({ route, navigation }) {
                     </View>
                 </View>
 
+                {/* ingredients */}
+                <View style={{ marginTop: 20 }}>
+                    <Text style={{
+                        fontSize: 20,
+                        fontWeight: "bold",
+                    }}>Ingredients</Text>
+                    <View style={{
+                        flexDirection: "row",
+                        flexWrap: "wrap",
+                        gap: 10, marginTop: 10
+                    }}>
 
+                        {ingredients.map((item) => {
+                            return (
+                                <View style={{
+                                    paddingVertical: 10,
+                                    paddingHorizontal: 15,
+                                    backgroundColor: "#129575",
+                                    borderRadius: 20,
+                                }}>
+                                    <Text style={{ color: "white" }}>{item}</Text>
+                                </View>
+                            )
+                        })}
+                    </View>
+                </View>
 
             </View>
 
