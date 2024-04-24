@@ -5,7 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 export function RecipeDetails({ route, navigation }) {
 
-    const { name, image, description } = route.params;
+    const { name, image, description, time, difficulty, calories, ingredients } = route.params;
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#129575" }}>
             <View>
@@ -27,6 +27,7 @@ export function RecipeDetails({ route, navigation }) {
                 paddingHorizontal: 20,
 
             }}>
+                {/* image & description */}
                 <View style={{ alignItems: "center" }}>
                     <Image source={image} style={{
                         height: 170,
@@ -43,13 +44,16 @@ export function RecipeDetails({ route, navigation }) {
                     </Text>
                     <Text style={{
                         color: "#636363",
-                        fontSize: 18,
+                        fontSize: 15,
                         fontWeight: "bold",
                         textAlign: "center",
                     }}>{description}
                     </Text>
                 </View>
+
+
             </View>
+
         </SafeAreaView>
     )
 }
