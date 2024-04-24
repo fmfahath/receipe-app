@@ -11,7 +11,7 @@ export function RecipeCard({ data, navigation }) {
                     return (
                         <TouchableOpacity
                             onPress={() => {
-                                navigation.navigate("RecipeDetails");
+                                navigation.navigate("RecipeDetails", item);
                             }}
                             style={{
                                 flex: 1,
