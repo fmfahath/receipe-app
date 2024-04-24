@@ -10,6 +10,7 @@ export function RecipeDetails({ route, navigation }) {
 
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: "#129575" }}>
+            {/* back button */}
             <View>
                 <TouchableOpacity
                     onPress={() => {
@@ -29,33 +30,36 @@ export function RecipeDetails({ route, navigation }) {
                 paddingHorizontal: 20,
 
             }}>
-                {/* image & description */}
+                {/* image */}
                 <View style={{ alignItems: "center" }}>
                     <Image source={image} style={{
-                        height: 170,
-                        width: 170,
-                        marginTop: -100,
-                        marginBottom: 20
+                        height: 250,
+                        width: 250,
+                        resizeMode: "contain",
+                        marginTop: -130,
                     }} />
-                    <Text style={{
-                        color: "#097a5f",
-                        fontSize: 25,
-                        fontWeight: "bold",
-                        marginBottom: 10
-                    }}>{name}
-                    </Text>
-                    <Text style={{
-                        color: "#636363",
-                        fontSize: 15,
-                        fontWeight: "bold",
-                        textAlign: "center",
-                        marginBottom: 20
-
-                    }}>{description}
-                    </Text>
                 </View>
 
                 <ScrollView>
+                    {/* title & description */}
+                    <View style={{ alignItems: "center" }}>
+                        <Text style={{
+                            color: "#097a5f",
+                            fontSize: 25,
+                            fontWeight: "bold",
+                            marginBottom: 10
+                        }}>{name}
+                        </Text>
+                        <Text style={{
+                            color: "#636363",
+                            fontSize: 15,
+                            fontWeight: "bold",
+                            textAlign: "center",
+                            marginBottom: 20
+
+                        }}>{description}
+                        </Text>
+                    </View>
                     {/* min & medium & calories */}
                     <View style={{
                         flexDirection: "row",
